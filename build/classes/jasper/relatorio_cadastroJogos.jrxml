@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relatorio_cadastroJogos" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dcb13280-4b57-4040-811c-768c101e3997">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Relatorio_Marinke_Jogos.xml"/>
+	<queryString language="SQL">
+		<![CDATA[Select * from  cadastro.cadastrojogo]]>
+	</queryString>
+	<field name="fabricanteJogo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="fabricanteJogo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cadastrojogo"/>
+	</field>
+	<field name="tituloJogo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="tituloJogo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cadastrojogo"/>
+	</field>
+	<field name="genero" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="genero"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cadastrojogo"/>
+	</field>
+	<field name="plataforma" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="plataforma"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cadastrojogo"/>
+	</field>
+	<group name="fabricanteJogo">
+		<groupExpression><![CDATA[$F{fabricanteJogo}]]></groupExpression>
+	</group>
+	<group name="tituloJogo">
+		<groupExpression><![CDATA[$F{tituloJogo}]]></groupExpression>
+	</group>
+	<group name="genero">
+		<groupExpression><![CDATA[$F{genero}]]></groupExpression>
+	</group>
+	<group name="plataforma">
+		<groupExpression><![CDATA[$F{plataforma}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement x="200" y="-10" width="180" height="50" uuid="347fa255-396e-49dc-ad33-8fe1210d9944"/>
+				<textElement>
+					<font size="29" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RELATÓRIO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="76" splitType="Stretch">
+			<staticText>
+				<reportElement x="150" y="10" width="290" height="40" forecolor="#FF0400" uuid="958e5d43-0f34-40be-ac61-bd236084d056"/>
+				<textElement>
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JOGOS CADASTRADOS]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="226" splitType="Stretch">
+			<textField>
+				<reportElement x="320" y="0" width="117" height="30" uuid="c7801d4a-2cee-4097-8a30-2f09aa086a6e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3ca55cf2-b44e-4767-90f3-90c0edc41672"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{fabricanteJogo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="55" width="117" height="30" uuid="67be063f-ea40-487d-963c-53fa1c0cc4f8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bd67c317-2d1a-470d-ab3e-b0b8ed126c85"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{tituloJogo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="110" width="117" height="30" uuid="f099dc36-c2a8-4973-86a1-9b320de17fd1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2bc5d25f-17f8-49b8-9162-4fb31bfac1b2"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{genero}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="170" width="127" height="30" uuid="e78d0c8b-3744-439c-8208-2704681806df">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="87a0d6a4-7834-4234-a766-78998a044b76"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{plataforma}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="153" y="0" width="117" height="30" forecolor="#FF0000" uuid="fc3b2db8-355f-4395-a8a7-1f5d3ce4830b"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[FABRICANTE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="153" y="50" width="117" height="30" forecolor="#FF0000" uuid="893756e9-2d55-45eb-9b71-c4f190d946d7"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Titulo do Jogo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="153" y="110" width="137" height="30" forecolor="#FF0000" uuid="d9f65865-0708-4a63-affc-f639cd08ae65"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Gênero do Jogo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="153" y="170" width="137" height="30" forecolor="#FF0000" uuid="543d0959-c0b2-433a-8e1b-a46c5e5903a3"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Plataforma do Jogo:]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="75" splitType="Stretch">
+			<textField>
+				<reportElement x="460" y="12" width="100" height="30" uuid="3d4b995a-7ff4-47e4-9de3-f9824bb6598c"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

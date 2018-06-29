@@ -1,17 +1,15 @@
-
 package Telas;
 
 import DAO.CadastrarCliente;
-import javabeans.cadastrojogo;
+import javabeans.Moto;
+import javabeans.Marca;
+import javabeans.Modelo;
 import javax.swing.JOptionPane;
 
 /**
  *
- * @author Camila e Luan 
+ * @author Arthur, Gustavo e Ulisses
  */
-
-
-   
 public class CadastroJogo extends javax.swing.JFrame {
 
     /**
@@ -52,20 +50,18 @@ public class CadastroJogo extends javax.swing.JFrame {
         jDesktopPane3 = new javax.swing.JDesktopPane();
         jLabel8 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        titulo = new javax.swing.JTextField();
+        Preco = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        Fabricante = new javax.swing.JTextField();
+        KmRodado = new javax.swing.JTextField();
         Salvar1 = new javax.swing.JButton();
         inserir = new javax.swing.JButton();
-        Aventura = new javax.swing.JRadioButton();
-        Corrida = new javax.swing.JRadioButton();
-        RPG = new javax.swing.JRadioButton();
-        MOBA = new javax.swing.JRadioButton();
-        PC = new javax.swing.JCheckBox();
+        HONDA = new javax.swing.JRadioButton();
+        BMW = new javax.swing.JRadioButton();
+        YAMAHA = new javax.swing.JRadioButton();
         proximo = new javax.swing.JButton();
-        Xbox = new javax.swing.JCheckBox();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        DatFab = new javax.swing.JTextField();
         jDesktopPane4 = new javax.swing.JDesktopPane();
 
         jpIdade1.setBackground(new java.awt.Color(255, 255, 255));
@@ -207,35 +203,32 @@ public class CadastroJogo extends javax.swing.JFrame {
 
         jLabel8.setFont(new java.awt.Font("Impact", 1, 36)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 204, 204));
-        jLabel8.setText("Cadastro do Jogo");
+        jLabel8.setText("Cadastro Moto");
         jDesktopPane3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setText("Titulo:");
-        jDesktopPane3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
+        jLabel3.setText("Preço:");
+        jDesktopPane3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 320, -1, -1));
 
-        titulo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        titulo.addActionListener(new java.awt.event.ActionListener() {
+        Preco.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Preco.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tituloActionPerformed(evt);
+                PrecoActionPerformed(evt);
             }
         });
-        jDesktopPane3.add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 180, -1));
+        jDesktopPane3.add(Preco, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, 230, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setText("Genero:");
-        jDesktopPane3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, -1, -1));
+        jLabel4.setText("Modelo/Marca:");
+        jDesktopPane3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel5.setText("Plataforma:");
-        jDesktopPane3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, -1, -1));
-
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel7.setText("Fabricante do Jogo:");
-        jDesktopPane3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
-
-        Fabricante.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jDesktopPane3.add(Fabricante, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 230, -1));
+        KmRodado.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        KmRodado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                KmRodadoActionPerformed(evt);
+            }
+        });
+        jDesktopPane3.add(KmRodado, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 230, -1));
 
         Salvar1.setBackground(new java.awt.Color(153, 153, 153));
         Salvar1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -245,7 +238,7 @@ public class CadastroJogo extends javax.swing.JFrame {
                 Salvar1ActionPerformed(evt);
             }
         });
-        jDesktopPane3.add(Salvar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 450, 90, 30));
+        jDesktopPane3.add(Salvar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, 90, 30));
 
         inserir.setBackground(new java.awt.Color(153, 153, 153));
         inserir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -255,37 +248,32 @@ public class CadastroJogo extends javax.swing.JFrame {
                 inserirActionPerformed(evt);
             }
         });
-        jDesktopPane3.add(inserir, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 450, 100, 30));
+        jDesktopPane3.add(inserir, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 390, 100, 30));
 
-        Aventura.setBackground(new java.awt.Color(255, 255, 255));
-        Aventura.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Aventura.setText("Aventura");
-        Aventura.addActionListener(new java.awt.event.ActionListener() {
+        HONDA.setBackground(new java.awt.Color(255, 255, 255));
+        HONDA.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        HONDA.setText("Honda CBR1000rr");
+        HONDA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AventuraActionPerformed(evt);
+                HONDAActionPerformed(evt);
             }
         });
-        jDesktopPane3.add(Aventura, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, -1, -1));
+        jDesktopPane3.add(HONDA, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
 
-        Corrida.setBackground(new java.awt.Color(255, 255, 255));
-        Corrida.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Corrida.setText("Corrida");
-        jDesktopPane3.add(Corrida, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 290, -1, -1));
+        BMW.setBackground(new java.awt.Color(255, 255, 255));
+        BMW.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        BMW.setText("BMW - S1000rr");
+        BMW.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BMWActionPerformed(evt);
+            }
+        });
+        jDesktopPane3.add(BMW, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, -1, -1));
 
-        RPG.setBackground(new java.awt.Color(255, 255, 255));
-        RPG.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        RPG.setText("RPG");
-        jDesktopPane3.add(RPG, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, -1, -1));
-
-        MOBA.setBackground(new java.awt.Color(255, 255, 255));
-        MOBA.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        MOBA.setText("MOBA");
-        jDesktopPane3.add(MOBA, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, -1, -1));
-
-        PC.setBackground(new java.awt.Color(255, 255, 255));
-        PC.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        PC.setText("PC");
-        jDesktopPane3.add(PC, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, -1, -1));
+        YAMAHA.setBackground(new java.awt.Color(255, 255, 255));
+        YAMAHA.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        YAMAHA.setText("Yamaha - yzf R1");
+        jDesktopPane3.add(YAMAHA, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 140, -1, -1));
 
         proximo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         proximo.setText("PRÓXIMO");
@@ -294,17 +282,18 @@ public class CadastroJogo extends javax.swing.JFrame {
                 proximoActionPerformed(evt);
             }
         });
-        jDesktopPane3.add(proximo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 450, 120, 30));
+        jDesktopPane3.add(proximo, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 390, 120, 30));
 
-        Xbox.setBackground(new java.awt.Color(255, 255, 255));
-        Xbox.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Xbox.setText("Xbox");
-        Xbox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                XboxActionPerformed(evt);
-            }
-        });
-        jDesktopPane3.add(Xbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 390, -1, -1));
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel9.setText("Dat. Fabricação:");
+        jDesktopPane3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, -1, -1));
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel10.setText("KM Rodado:");
+        jDesktopPane3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
+
+        DatFab.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jDesktopPane3.add(DatFab, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, 230, -1));
 
         jPanel1.add(jDesktopPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 550, 540));
 
@@ -342,23 +331,18 @@ public class CadastroJogo extends javax.swing.JFrame {
 
     private void jrbMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbMActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_jrbMActionPerformed
 
     private void inserirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inserirActionPerformed
         // botao novo
-        
-        this.Aventura.setSelected(false);
-        this.RPG.setSelected(false);
-        this.Corrida.setSelected(false);
-        this.MOBA.setSelected(false);
 
-        this.PC.setSelected(false);
-        this.Xbox.setSelected(false);
+        this.HONDA.setSelected(false);
+        this.BMW.setSelected(false);
+        this.YAMAHA.setSelected(false);
 
-        
-        this.Fabricante.setText("");
-        this.titulo.setText("");
+        this.KmRodado.setText("");
+        this.Preco.setText("");
     }//GEN-LAST:event_inserirActionPerformed
 
     private void Salvar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Salvar1ActionPerformed
@@ -366,71 +350,75 @@ public class CadastroJogo extends javax.swing.JFrame {
         try {
             cadastrojogo obj = new cadastrojogo();
 
-            if(Aventura.isSelected()){
-                obj.setGenero(Aventura.getText());
+            if (HONDA.isSelected()) {
+                obj.setCodMarca("1".getText());
+                obj.setCodModelo("1".getText());
+                obj.setModelo("CBR".getText());
+                obj.setMarca(HONDA.getText())
             }
-            
-            if(RPG.isSelected()){
-                obj.setGenero(RPG.getText());
-            }
-            
-            if(Corrida.isSelected()){
-                obj.setGenero(Corrida.getText());
-            }
-            
-            if(MOBA.isSelected()){
-                obj.setGenero(MOBA.getText());
-            }
-            
-            if(PC.isSelected()){
-                obj.setPlataforma(PC.getText());
-            }
-            if(Xbox.isSelected()){
-                obj.setPlataforma(Xbox.getText());
-            }
-            
-            obj.setTituloJogo(titulo.getText());
-            
-            obj.setFabricanteJogo(Fabricante.getText());
 
-            JOptionPane.showMessageDialog(null,"Cadastrado com sucesso");
+            if (BMW.isSelected()) {
+                obj.setCodMarca("2".getText());
+                obj.setCodModelo("2".getText());
+                obj.setModelo("S1000rr".getText());
+                obj.setMarca(BMW.getText());
+            }
+
+            if (YAMAHA.isSelected()) {
+                obj.setCodMarca("3".getText());
+                obj.setCodModelo("3".getText());
+                obj.setModelo("yzf R1".getText());
+                obj.setMarca(YAMAHA.getText());
+            }
+
+            obj.setKmRodado(KmRodado.getText());
+
+            obj.setAnoFab(DatFab.getText());
             
+            obj.setPreco(Preco.getText());
+            
+            JOptionPane.showMessageDialog(null, "Cadastrado com sucesso");
+
             CadastrarCliente dao = new CadastrarCliente();
             dao.cadastrarFabricante(obj);
             //-------------------------------
         } catch (Exception erro) {
 
-            JOptionPane.showMessageDialog(null,"Erro" + erro);
+            JOptionPane.showMessageDialog(null, "Erro" + erro);
         }
-        
+
     }//GEN-LAST:event_Salvar1ActionPerformed
 
-    private void tituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tituloActionPerformed
+    private void PrecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrecoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tituloActionPerformed
+    }//GEN-LAST:event_PrecoActionPerformed
 
     private void proximoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proximoActionPerformed
-        Listar CadastroJogo = new Listar ();
+        Listar CadastroJogo = new Listar();
         CadastroJogo.setVisible(true);
         dispose();
     }//GEN-LAST:event_proximoActionPerformed
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
-        
+
     }//GEN-LAST:event_formWindowActivated
 
-    private void XboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_XboxActionPerformed
+    private void BMWActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BMWActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_XboxActionPerformed
+    }//GEN-LAST:event_BMWActionPerformed
 
-    private void AventuraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AventuraActionPerformed
+    private void HONDAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HONDAActionPerformed
+
+    }//GEN-LAST:event_HONDAActionPerformed
+
+    private void KmRodadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KmRodadoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_AventuraActionPerformed
+    }//GEN-LAST:event_KmRodadoActionPerformed
 
     /**
      * @param args the command line arguments
      */
-   public static void main(String args[]) {
+    public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -463,14 +451,13 @@ public class CadastroJogo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JRadioButton Aventura;
-    private javax.swing.JRadioButton Corrida;
-    private javax.swing.JTextField Fabricante;
-    private javax.swing.JRadioButton MOBA;
-    private javax.swing.JCheckBox PC;
-    private javax.swing.JRadioButton RPG;
+    private javax.swing.JRadioButton BMW;
+    private javax.swing.JTextField DatFab;
+    private javax.swing.JRadioButton HONDA;
+    private javax.swing.JTextField KmRodado;
+    private javax.swing.JTextField Preco;
     private javax.swing.JButton Salvar1;
-    private javax.swing.JCheckBox Xbox;
+    private javax.swing.JRadioButton YAMAHA;
     private javax.swing.JButton btnNovo;
     private javax.swing.JButton btnSalvar;
     private javax.swing.JLabel codigo;
@@ -481,12 +468,12 @@ public class CadastroJogo extends javax.swing.JFrame {
     private javax.swing.JDesktopPane jDesktopPane4;
     private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JCheckBox jcb1;
@@ -497,7 +484,6 @@ public class CadastroJogo extends javax.swing.JFrame {
     private javax.swing.JButton proximo;
     private javax.swing.JLabel quantidade;
     private javax.swing.JLabel sexo;
-    private javax.swing.JTextField titulo;
     private javax.swing.JTextField txtCodigo;
     private javax.swing.JTextField txtQuantidade;
     // End of variables declaration//GEN-END:variables

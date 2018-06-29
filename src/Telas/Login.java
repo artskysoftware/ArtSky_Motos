@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Camila e Luan
+ * @author Arthur, Gustavo e Ulisses
  */
 public class Login extends javax.swing.JFrame {
 
@@ -28,15 +28,7 @@ public class Login extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        Senha1 = new javax.swing.JTextField();
-        Nome = new javax.swing.JTextField();
-        estudante = new javax.swing.JRadioButton();
-        salvar = new javax.swing.JButton();
-        profissional1 = new javax.swing.JRadioButton();
         proximo = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -53,34 +45,6 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setText("SERVIDOR DE GAMES");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 420, 90));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel4.setText("NOME:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 80, 20));
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel5.setText("Plano:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 70, 20));
-        getContentPane().add(Senha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 180, 30));
-        getContentPane().add(Nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, 350, 30));
-
-        estudante.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        estudante.setText("ESTUDANTE");
-        getContentPane().add(estudante, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 310, -1, -1));
-
-        salvar.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        salvar.setForeground(new java.awt.Color(255, 0, 0));
-        salvar.setText("SALVAR");
-        salvar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                salvarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(salvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 390, 150, 40));
-
-        profissional1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        profissional1.setText("PROFISSIONAL");
-        getContentPane().add(profissional1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 310, -1, -1));
-
         proximo.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         proximo.setForeground(new java.awt.Color(255, 0, 0));
         proximo.setText("PRÓXIMO");
@@ -89,11 +53,7 @@ public class Login extends javax.swing.JFrame {
                 proximoActionPerformed(evt);
             }
         });
-        getContentPane().add(proximo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 390, 160, 40));
-
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel6.setText("SENHA:");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 90, 20));
+        getContentPane().add(proximo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 160, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/binary_clouds_by_unrater-d6l9ti3.png"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -130,33 +90,6 @@ public class Login extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void salvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvarActionPerformed
-        try {
-            login obj = new login();
-
-            if(estudante.isSelected()){
-                obj.setPlano(estudante.getText());
-            }
-            
-            if(profissional1.isSelected()){
-                obj.setPlano(profissional1.getText());
-            }
-           
-            obj.setNome(Nome.getText());
-            
-            obj.setSenha(Senha1.getText());
-
-            JOptionPane.showMessageDialog(null,"Cadastrado com sucesso");
-            
-            CadastrarCliente da = new CadastrarCliente();
-            da.cadastrarLogin(obj);
-            //-------------------------------
-        } catch (Exception erro) {
-
-            JOptionPane.showMessageDialog(null,"Erro" + erro);
-        }           
-    }//GEN-LAST:event_salvarActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         CadastroJogo Login = new  CadastroJogo ();
@@ -212,22 +145,14 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Nome;
-    private javax.swing.JTextField Senha1;
-    private javax.swing.JRadioButton estudante;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem menu;
-    private javax.swing.JRadioButton profissional1;
     private javax.swing.JButton proximo;
-    private javax.swing.JButton salvar;
     // End of variables declaration//GEN-END:variables
 }

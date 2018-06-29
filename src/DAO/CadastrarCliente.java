@@ -15,7 +15,8 @@ import java.util.List;
 
 /**
  *
- * @author Camila e Luan
+ * @author Arthur, Gustavo e Ulisses
+ * 
  */
 public class CadastrarCliente {
     private final Connection conecta;
